@@ -11,6 +11,8 @@
         }
       ],
       "SupportedInMultiActions": false,
+      "DisableCaching": true,
+      "UserTitleEnabled": true,
       "Tooltip": "TODO_ENTER_TOOLTIP",
       "UUID": "com.developer.csharptemplate.pluginactionkey",
       "PropertyInspectorPath": "PropertyInspector/PluginActionPI.html"
@@ -22,7 +24,9 @@
   "Icon": "Images/pluginIcon",
   "URL": "TODO_ENTER_YOUR_HOMEPAGE",
   "Version": "1.0",
-  "CodePath": "StreamDeck_Tools_Template1",
+  "CodePath": "com.developer.csharptemplate.exe",
+  "CodePathWin": "com.developer.csharptemplate.exe",
+  "CodePathMac": "com.developer.csharptemplate",
   "Category": "Custom",
   "CategoryIcon": "Images/categoryIcon",
   "OS": [
