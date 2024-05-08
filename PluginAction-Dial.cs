@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StreamDeckTools_Template1
+namespace StreamDeck_Tools_Template_NET_8
 {
     [PluginActionId("com.developer.csharptemplate.pluginactiondial")]
     public class PluginActionDial : EncoderBase
@@ -39,52 +39,52 @@ namespace StreamDeckTools_Template1
         #endregion
         public PluginActionDial(SDConnection connection, InitialPayload payload) : base(connection, payload)
         {
-            throw new NotImplementedException();
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Constructor called");
         }
 
         private void UpdateTitle()
         {
-            throw new NotImplementedException();
+            Logger.Instance.LogMessage(TracingLevel.INFO, "UpdateTitle called");
         }
 
         public override void DialRotate(DialRotatePayload payload)
         {
-            throw new NotImplementedException();
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Dial Rotate");
         }
 
         public override void DialDown(DialPayload payload)
         {
-            throw new NotImplementedException();
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Dial Down");
         }
 
         public override void DialUp(DialPayload payload)
         {
-            throw new NotImplementedException();
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Dial Up");
         }
 
         public override void TouchPress(TouchpadPressPayload payload)
         {
-            throw new NotImplementedException();
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Touch Press");
         }
 
         public override void ReceivedSettings(ReceivedSettingsPayload payload)
         {
-            throw new NotImplementedException();
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Received Settings");
         }
 
         public override void ReceivedGlobalSettings(ReceivedGlobalSettingsPayload payload)
         {
-            throw new NotImplementedException();
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Received Global Settings");
         }
 
         public override void OnTick()
         {
-            throw new NotImplementedException();
+
         }
 
         public override void Dispose()
         {
-            throw new NotImplementedException();
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Destructor called");
         }
 
         // Additional event handling methods can be added as needed

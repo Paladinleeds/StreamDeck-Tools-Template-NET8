@@ -1,4 +1,5 @@
 ﻿using BarRaider.SdTools;
+using BarRaider.SdTools.Payloads;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -10,8 +11,10 @@ using System.Threading.Tasks;
 
 namespace StreamDeck_Tools_Template_NET_8
 {
-    [PluginActionId("com.developer.csharptemplate.pluginactionkey")]
-    public class PluginActionKey : KeypadBase
+    // Note that this file will showcase the functionality of the KeyAndEncoderBase style using a clock plugin. The other PluginAction files will provide logging templates only.
+    // TODO: Implement functionality from https://github.com/elgatosf/sample-clock-plugin but rewritten in C#.
+    [PluginActionId("com.developer.csharptemplate.clockexample")]
+    public class ClockExample : KeyAndEncoderBase
     {
         private class PluginSettings
         {
@@ -36,7 +39,7 @@ namespace StreamDeck_Tools_Template_NET_8
         private PluginSettings settings;
 
         #endregion
-        public PluginActionKey(SDConnection connection, InitialPayload payload) : base(connection, payload)
+        public ClockExample(SDConnection connection, InitialPayload payload) : base(connection, payload)
         {
             if (payload.Settings == null || payload.Settings.Count == 0)
             {
@@ -59,7 +62,30 @@ namespace StreamDeck_Tools_Template_NET_8
             Logger.Instance.LogMessage(TracingLevel.INFO, "Key Pressed");
         }
 
-        public override void KeyReleased(KeyPayload payload) { }
+        public override void KeyReleased(KeyPayload payload)
+        {
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Key Released");
+        }
+
+        public override void DialRotate(DialRotatePayload payload)
+        {
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Dial Rotate");
+        }
+
+        public override void DialDown(DialPayload payload)
+        {
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Dial Down");
+        }
+
+        public override void DialUp(DialPayload payload)
+        {
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Dial Up");
+        }
+
+        public override void TouchPress(TouchpadPressPayload payload)
+        {
+            Logger.Instance.LogMessage(TracingLevel.INFO, "Touch Press");
+        }
 
         public override void OnTick() { }
 

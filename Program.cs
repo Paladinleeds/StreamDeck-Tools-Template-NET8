@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StreamDeck_Tools_Template1
+namespace StreamDeck_Tools_Template_NET_8
 {
     internal class Program
     {
